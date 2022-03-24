@@ -1,7 +1,9 @@
 import React from "react";
 
+export const DataContext = React.createContext(null);
+
 const DataProvider: React.FC = () => {
-  const [items, setItems] = React.useState([]);
+	const [items, setItems] = React.useState([]);
 	return <div>DataProvider</div>;
 };
 
