@@ -2,7 +2,7 @@ import React from "react";
 
 const FormInput: React.FC = () => {
 	const [itemName, setItemName] = React.useState<string>("");
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => { // on event, that is to define it's type
 		setItemName(event.target.value);
 	};
 	return (
