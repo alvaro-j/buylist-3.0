@@ -1,10 +1,15 @@
 import React from "react";
 
-const FormInput: React.FC = () => {
-	const [itemName, setItemName] = React.useState<string>("");
+interface Props {
+	// create the interface to pass the props to the component
+	input: string;
+	setInput: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const FormInput: React.FC<Props> = ({ input, setInput }) => {
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		// on event, that is to define it's type
-		setItemName(event.target.value);
+		setInput(event.target.value);
 	};
 
 	return (
@@ -13,7 +18,7 @@ const FormInput: React.FC = () => {
 				type="text"
 				required
 				placeholder="Which items would you like to buy?"
-				value={itemName}
+				value={input}
 				onChange={handleChange}
 			/>
 			<button type="submit">Add</button>
