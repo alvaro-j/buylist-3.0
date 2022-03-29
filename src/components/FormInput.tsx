@@ -1,7 +1,8 @@
 import React from "react";
 
 interface Props {
-	// create the interface to pass the props to the component
+	// create the interface to pass the props to the component,
+	// because it needs to specify the types of input and setInput
 	input: string;
 	setInput: React.Dispatch<React.SetStateAction<string>>;
 }
