@@ -8,6 +8,8 @@ interface Props {
 }
 
 const FormInput: React.FC<Props> = ({ input, setInput }) => {
+	// <Props> = it's to define the type of the props
+
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		// on event, that is to define it's type
 		setInput(event.target.value);
