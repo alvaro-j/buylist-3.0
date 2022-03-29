@@ -7,7 +7,9 @@ const App: React.FC = () => {
 	const [input, setInput] = React.useState<string>("");
 	const [itemArray, setItemArray] = React.useState<Item[]>([]);
 
-	const handleAddItem = () => {};
+	const handleAddItem = (e: React.FormEvent) => {
+		e.preventDefault();
+	};
 
 	return (
 		<div className="main">
