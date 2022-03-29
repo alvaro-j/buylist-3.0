@@ -5,9 +5,10 @@ interface Props {
 	// because it needs to specify the types of input and setInput
 	input: string;
 	setInput: React.Dispatch<React.SetStateAction<string>>;
+	handleAddItem: () => void; 
 }
 
-const FormInput: React.FC<Props> = ({ input, setInput }) => {
+const FormInput: React.FC<Props> = ({ input, setInput, handleAddItem }) => {
 	// <Props> = it's to define the type of the props
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

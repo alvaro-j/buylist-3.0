@@ -5,13 +5,16 @@ import { Item } from "./model";
 const App: React.FC = () => {
 	// FC stands for functional component
 	const [input, setInput] = React.useState<string>("");
-	const [itemArray, setItemArray] = React.useState<Item[]>([])
+	const [itemArray, setItemArray] = React.useState<Item[]>([]);
+
+	const handleAddItem = () => {};
+
 	return (
 		<div className="main">
 			<h1>
 				buy<span>List</span>
 			</h1>
-			<FormInput input={input} setInput={setInput} />
+			<FormInput handleAddItem={handleAddItem} input={input} setInput={setInput} />
 		</div>
 	);
 };
