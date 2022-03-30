@@ -10,7 +10,8 @@ const App: React.FC = () => {
 	const handleAddItem = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (itemArray) {
-			setItemArray([...itemArray, { id: Date.now(), item: input, completed: false }]); 
+			// the if statement checks if the arrat exists
+			setItemArray([...itemArray, { id: Date.now(), item: input, completed: false }]); // spread the other array items and add the new item
 			setInput("");
 		}
 	};
