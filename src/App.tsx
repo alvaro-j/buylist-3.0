@@ -9,6 +9,10 @@ const App: React.FC = () => {
 
 	const handleAddItem = (e: React.FormEvent) => {
 		e.preventDefault();
+		if (itemArray) {
+			setItemArray([...itemArray, { id: Date.now(), item: input, completed: false }]); 
+			setInput("");
+		}
 	};
 
 	return (
