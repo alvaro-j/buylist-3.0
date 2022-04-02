@@ -1,6 +1,6 @@
 # Buylist 3.0
 
-![image](https://user-images.githubusercontent.com/86482525/152168698-de06239b-435a-44e2-8b86-9c4420069fc9.png)
+
 
 ## Getting Started with Create React App ⚛
 
