@@ -22,7 +22,7 @@ Rebuild of my old buyList project. This time it was build with React.js and it's
 
 ### Links🔗
 
-- Live Site URL: [Buylist 2.0](https://buylist-2-0.vercel.app/)
+
 
 ## My process🧩
 
@@ -31,9 +31,8 @@ Rebuild of my old buyList project. This time it was build with React.js and it's
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- JavaScript(React.js)
+- TypeScript(React.js)
 - Create React App
-- Context API
 
 ### What I learned📝
 
