@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Overview🎯
 
-Rebuild of my old buyList project. This time it was build with React.js and it's Context API.
+Rebuild of my buyList project. This time it was build with TypeScript and React.js.
 
 ### Links🔗
 
