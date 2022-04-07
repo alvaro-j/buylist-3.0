@@ -42,7 +42,7 @@ return <DataContext.Provider value={[items, setItems]}>{children}</DataContext.P
 ```
 ### Useful resources
 
-- [Context API](https://www.youtube.com/watch?v=35lXWvCuM8o) - This helped me understand how to use the Context API from React. I'd recommend it to anyone who wants to understand this.
+
 
 ## Author🙋🏻
 
