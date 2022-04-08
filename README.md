@@ -35,10 +35,9 @@ Rebuild of my buyList project. This time it was build with TypeScript and React.
 - Create React App
 
 ### What I learned📝
-
-- Use the <strong>React Context API</strong>:
+- Soon...
 ```js
-return <DataContext.Provider value={[items, setItems]}>{children}</DataContext.Provider>;
+
 ```
 ### Useful resources
 
