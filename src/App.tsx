@@ -23,7 +23,7 @@ const App: React.FC = () => {
 				buy<span>List</span>
 			</h1>
 			<FormInput handleAddItem={handleAddItem} input={input} setInput={setInput} />
-			<SingleItem itemArray={itemArray} />
+			<SingleItem itemArray={itemArray} setItemArray={setItemArray} />
 		</div>
 	);
 };
