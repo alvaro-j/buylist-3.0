@@ -5,7 +5,7 @@ interface Props {
 	// because it needs to specify the types of input and setInput
 	input: string;
 	setInput: React.Dispatch<React.SetStateAction<string>>;
-	handleAddItem: (e:React.FormEvent) => void; // it's void cause it doesn't return anything
+	handleAddItem: (e: React.FormEvent) => void; // it's void cause it doesn't return anything
 }
 
 const FormInput: React.FC<Props> = ({ input, setInput, handleAddItem }) => {
