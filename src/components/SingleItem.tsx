@@ -11,13 +11,15 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 		setItemArray(
 			itemArray.map((item) => (item.id === id ? { ...item, completed: !item.completed } : item))
 			// checks if the id matches the parameter and then change the completed value of it
-			);
-		};
-		
-		const handleDeleteItem = (id: number) => {
-			setItemArray(itemArray.filter((item) => item.id !== id));
-			// checks if the item.id is different from the id parameter
+		);
 	};
+
+	const handleDeleteItem = (id: number) => {
+		setItemArray(itemArray.filter((item) => item.id !== id));
+		// checks if the item.id is different from the id parameter
+	};
+
+	const [edit, setEdit] = React.useState<boolean>(false);
 
 	return (
 		<ul>
