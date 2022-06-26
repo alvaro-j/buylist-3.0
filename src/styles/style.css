@@ -110,7 +110,7 @@ ul .btn-yellow:disabled {
 	transform: none;
 }
 
-#delete {
+.delete {
 	background-color: #dc143c;
 	border: none;
 	outline: none;
@@ -121,7 +121,7 @@ ul .btn-yellow:disabled {
 	transition: 0.2s;
 }
 
-#delete:hover {
+.delete:hover {
 	transform: scale(1.1);
 }
 
