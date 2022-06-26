@@ -14,9 +14,7 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 	};
 
 	const handleDeleteItem = (id: number) => {
-		setItemArray(
-			itemArray.map((item) => (item.id === id ? { ...item, completed: !item.completed } : item))
-		);
+		setItemArray(itemArray.filter((item) => item.id !== id));
 	};
 
 	return (
@@ -36,7 +34,7 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 						<button className="btn-yellow" disabled={item.completed}>
 							Edit
 						</button>
-						<button className="delete" onClick={() => {}}>
+						<button className="delete" onClick={() => handleDeleteItem(item.id)}>
 							Delete
 						</button>
 					</div>
