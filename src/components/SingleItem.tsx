@@ -10,11 +10,13 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 	const handleDoneItem = (id: number) => {
 		setItemArray(
 			itemArray.map((item) => (item.id === id ? { ...item, completed: !item.completed } : item))
-		);
-	};
-
-	const handleDeleteItem = (id: number) => {
-		setItemArray(itemArray.filter((item) => item.id !== id));
+			// checks if the id matches the parameter and then change the completed value of it
+			);
+		};
+		
+		const handleDeleteItem = (id: number) => {
+			setItemArray(itemArray.filter((item) => item.id !== id));
+			// checks if the item.id is different from the id parameter
 	};
 
 	return (
