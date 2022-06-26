@@ -20,28 +20,62 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 	};
 
 	const [edit, setEdit] = React.useState<boolean>(false);
+	const [editInputText, setEditInputText] = React.useState<string>("");
+
+	const handleSaveItem = (id: number) => {
+		setItemArray(
+			itemArray.map((item) => (item.id === id ? { ...item, item: editInputText } : item))
+		);
+		setEdit(false);
+	};
 
 	return (
 		<ul>
 			{itemArray.map((item) => (
 				<li key={item.id}>
-					<label htmlFor={item.id.toString()} className={item.completed ? "active" : ""}>
-						<input
-							type="checkbox"
-							id={item.id.toString()}
-							checked={item.completed}
-							onChange={() => handleDoneItem(item.id)}
-						/>
-						{item.item}
-					</label>
-					<div>
-						<button className="btn-yellow" disabled={item.completed}>
-							Edit
-						</button>
-						<button className="delete" onClick={() => handleDeleteItem(item.id)}>
-							Delete
-						</button>
-					</div>
+					{edit ? (
+						<>
+							<input
+								type="text"
+								id="editValue"
+								value={editInputText}
+								name="editValue"
+								onChange={(e) => setEditInputText(e.target.value.toLocaleLowerCase())}
+							/>
+
+							<button className="btn-yellow" onClick={() => handleSaveItem(item.id)}>
+								Save
+							</button>
+						</>
+					) : (
+						<>
+							<label htmlFor={item.id.toString()} className={item.completed ? "active" : ""}>
+								<input
+									type="checkbox"
+									id={item.id.toString()}
+									checked={item.completed}
+									onChange={() => handleDoneItem(item.id)}
+								/>
+								{item.item}
+							</label>
+							<div>
+								<button
+									className="btn-yellow"
+									disabled={item.completed}
+									onClick={() => {
+										if (!edit && !item.completed) {
+											setEdit(!edit);
+										}
+									}}
+								>
+									Edit
+								</button>
+								<button className="delete" onClick={() => handleDeleteItem(item.id)}>
+									Delete
+								</button>
+							</div>
+						</>
+					)}
 				</li>
 			))}
 		</ul>
