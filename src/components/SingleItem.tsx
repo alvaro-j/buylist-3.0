@@ -8,8 +8,16 @@ interface Props {
 const SingleItem: React.FC<Props> = ({ itemArray }) => {
 	return (
 		<ul>
-			{itemArray.map((item, index) => (
-				<li key={index}>{item.item}</li>
+			{itemArray.map((item) => (
+				<li key={item.id}>
+					<label htmlFor={item.id.toString()} className={item.completed ? "active" : ""}>
+						<input type="checkbox" id={item.id.toString()} checked={item.completed} />
+						{item.item}
+					</label>
+					<button className="btn-yellow" disabled={item.completed}>
+						Edit
+					</button>
+				</li>
 			))}
 		</ul>
 	);
