@@ -29,6 +29,10 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 		setEdit(false);
 	};
 
+	const handleEditItem = (id: number) => {
+		setEdit(!edit);
+	}
+
 	return (
 		<ul>
 			{itemArray.map((item) => (
@@ -64,7 +68,7 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 									disabled={item.completed}
 									onClick={() => {
 										if (!edit && !item.completed) {
-											setEdit(!edit);
+											handleEditItem(item.id)
 										}
 									}}
 								>
