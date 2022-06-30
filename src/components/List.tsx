@@ -6,7 +6,7 @@ interface Props {
 	setItemArray: React.Dispatch<React.SetStateAction<Item[]>>;
 }
 
-const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
+const List: React.FC<Props> = ({ itemArray, setItemArray }) => {
 	const handleDoneItem = (id: number) => {
 		setItemArray(
 			itemArray.map((item) => (item.id === id ? { ...item, completed: !item.completed } : item))
@@ -86,4 +86,4 @@ const SingleItem: React.FC<Props> = ({ itemArray, setItemArray }) => {
 	);
 };
 
-export default SingleItem;
+export default List;

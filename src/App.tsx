@@ -1,6 +1,6 @@
 import React from "react";
 import FormInput from "./components/FormInput";
-import SingleItem from "./components/SingleItem";
+import List from "./components/List";
 import { Item } from "./model";
 
 const App: React.FC = () => {
@@ -23,7 +23,7 @@ const App: React.FC = () => {
 				buy<span>List</span>
 			</h1>
 			<FormInput handleAddItem={handleAddItem} input={input} setInput={setInput} />
-			<SingleItem itemArray={itemArray} setItemArray={setItemArray} />
+			<List itemArray={itemArray} setItemArray={setItemArray} />
 		</div>
 	);
 };
