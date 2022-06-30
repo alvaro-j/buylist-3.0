@@ -37,7 +37,7 @@ Rebuild of my buyList project. This time it was build with TypeScript and React.
 ### What I learned📝
 - Set the <strong>type</strong>. of an state.
 ```js
-	const [input, setInput] = React.useState<string>("");
+  const [input, setInput] = React.useState<string>("");
 ```
 ### Useful resources
 
